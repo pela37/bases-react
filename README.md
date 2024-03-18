@@ -13,7 +13,7 @@ puis lancer [localhost:3000](http://localhost:3000/) sur un navigateur web.
 L'utilisation d'une base de données en local peut être contraignante, j'ai donc mis une option "utiliserDB" en ligne 10 de pages/index.js mis par défaut à false.
 Lorsque l'option est à false, les données sont récupérées du fichier data.js au lieu de se connecter à une base de données. Cela enlève l'onglet "Admin" qui permet de modifier la base de données.
 
-# Création de la base de données
+### Création de la base de données
 
 Pour que le projet fonctionne avec une base de données, il faut que postgreSQL soit installé sur l'ordinateur. Il faudra modifier les paramètres du fichier .env afin qu'ils correspondent à votre configuration. Il faudra ensuite créer la base de données :
 
