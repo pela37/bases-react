@@ -1,6 +1,6 @@
 ## Introduction
 
-J'ai développé ce projet avec Next.js en react. C'est un semblant de site e-commerce de jeux vidéos avec un panier et un onglet "Admin" qui permet de modifier la base de données (donc le nom, prix... des produits vendus). Cela me permet de montrer que je connais les bases en terme de programmation de sites web ainsi que de gestion de base de données postgreSQL. Ce projet n'ai pas déployé sur un serveur, il est toujours en contexte de développement, il faudra donc le lancer avec npm :
+J'ai développé ce projet avec Next.js en react. C'est un semblant de site e-commerce de jeux vidéos avec un panier et un onglet "Admin" qui permet de modifier la base de données (donc le nom, prix... des produits vendus). Cela me permet de montrer que je connais les bases en terme de programmation de sites web ainsi que de gestion de base de données postgreSQL. Ce projet n'est pas déployé sur un serveur, il est toujours en contexte de développement, il faudra donc le lancer avec npm :
 
 ```bash
 npm run dev
