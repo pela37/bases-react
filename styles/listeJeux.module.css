@@ -1,0 +1,61 @@
+.ulNav {
+    display: flex;
+    background-color: red;
+    color: white;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.ulNav li {
+    padding: 10px 5vw;
+    border-right : 1px solid white;
+    cursor: pointer;
+}
+
+.ulNav li:hover {
+    background-color: rgb(255, 128, 128);
+}
+
+.leftNav {
+    display: flex;
+    align-items: center;
+}
+
+#panierLi {
+    padding: 10px 1vw;
+    border: none;
+}
+
+.panierDiv {
+    display: flex;
+    align-items: center;
+}
+
+.panierDiv p {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.ulJeux {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.jeu {
+    background-color: rgba(128, 128, 128, 128);
+    border-radius: 5%;
+    padding: 10px 20px;
+    margin: 0px 20px 10px;
+}
+
+.jeu input {
+    display: block;
+}
+
+.imgJeu {
+    border: 2px solid black;
+}
+
+.cliquable {
+    cursor:pointer;
+}

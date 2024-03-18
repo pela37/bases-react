@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Introduction
 
-## Getting Started
-
-First, run the development server:
+J'ai développé ce projet avec Next.js en react. C'est un semblant de site e-commerce de jeux vidéos avec un panier et un onglet "Admin" qui permet de modifier la base de données (donc le nom, prix... des produits vendus). Cela me permet de montrer que je connais les bases en terme de programmation de sites web ainsi que de gestion de base de données postgreSQL. Ce projet n'ai pas déployé sur un serveur, il est toujours en contexte de développement, il faudra donc le lancer avec npm :
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+puis lancer [localhost:3000](http://localhost:3000/) sur un navigateur web.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Base de données
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+L'utilisation d'une base de données en local peut être contraignante, j'ai donc mis une option "utiliserDB" en ligne 10 de pages/index.js mis par défaut à false.
+Lorsque l'option est à false, les données sont récupérées du fichier data.js au lieu de se connecter à une base de données. Cela enlève l'onglet "Admin" qui permet de modifier la base de données.
 
-## Learn More
+# Création de la base de données
 
-To learn more about Next.js, take a look at the following resources:
+Pour que le projet fonctionne avec une base de données, il faut que postgreSQL soit installé sur l'ordinateur. Il faudra modifier les paramètres du fichier .env afin qu'ils correspondent à votre configuration. Il faudra ensuite créer la base de données :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+createdb reactdb
+psql reactdb
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+puis dans psql :
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sql
+CREATE TABLE jeux (
+id integer,
+img jsonb,
+nom text,
+disposur text[],
+prix jsonb,
+description text
+);
+COPY jeux FROM 'db-content.txt';
+```
